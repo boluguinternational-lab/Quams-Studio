@@ -1,0 +1,101 @@
+.wwd-section {
+  background: #f9f5f0;
+  padding: 100px 80px;
+}
+
+.wwd-header {
+  max-width: 100%;
+}
+
+.wwd-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #6b5e55;
+  margin-bottom: 16px;
+}
+
+.wwd-title {
+  font-family: 'Canela', 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.wwd-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px; 
+  margin-top: 48px;
+}
+
+.wwd-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wwd-image-wrap {
+  height: 520px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.wwd-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wwd-image-wrap:hover .wwd-image {
+  transform: scale(1.03);
+}
+
+.wwd-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.wwd-image-label {
+  font-family: 'Canela', 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
+
+.wwd-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6b5e55;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .wwd-section {
+    padding: 24px;
+  }
+
+  .wwd-title {
+    font-size: 32px;
+  }
+
+  .wwd-grid {
+    grid-template-columns: 1fr;
+  }
+}

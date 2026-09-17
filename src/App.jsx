@@ -1,7 +1,8 @@
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Intro from './components/Intro.jsx'
-import Philosophy from './components/Philosophy.jsx'
+import Whatwedo from './components/Whatwedo.jsx'  
+import Ctainquiry from './components/Ctainquiry.jsx'   
 import Portfolio from './components/Portfolio.jsx'
 import Collections from './components/Collections.jsx'
 import Testimonials from './components/Testimonials.jsx'
@@ -14,7 +15,8 @@ export default function App() {
       <Nav />
       <Hero />
       <Intro />
-      <Philosophy />
+      <Whatwedo />  
+      <Ctainquiry />  
       <Portfolio />
       <Collections />
       <Testimonials />
