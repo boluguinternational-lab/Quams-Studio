@@ -1,0 +1,116 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background-image: url('https://picsum.photos/seed/hazelrye-hero/1800/1200');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Darkens the photo so the overlaid text stays readable at any crop */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 22, 18, 0.35) 0%,
+    rgba(20, 22, 18, 0.45) 55%,
+    rgba(20, 22, 18, 0.65) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 30rem;
+  margin: 0 auto 2.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background-color: #2354e6;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(35, 84, 230, 0.35);
+}
+
+.btn--primary:hover {
+  background-color: #1c44c2;
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid #2354e6;
+}
+
+.btn--secondary:hover {
+  background-color: #2354e6;
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  .btn--primary:hover,
+  .btn--secondary:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,144 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.intro__text-col {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 1.75rem;
+  order: 1;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .intro__text-col {
+    padding-top: 0.5rem;
+    width: 50%;
+  }
+}
+
+.intro__text {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.intro__title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 1.25rem;
+}
+
+.intro__paragraph {
+  font-size: 1.2rem; 
+  line-height: 1.7;
+  color: #555555;
+  margin: 0 0 0.85rem;
+}
+
+.intro__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+.intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #2354e6;
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background-color: #2354e6;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(35, 84, 230, 0.25);
+}
+
+.btn--primary:hover {
+  background-color: #1c44c2;
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #2354e6;
+  border: 1.5px solid #2354e6;
+}
+
+.btn--secondary:hover {
+  background-color: #2354e6;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  .btn--primary:hover,
+  .btn--secondary:hover {
+    transform: none;
+  }
+}
+
+.intro__image-col {
+  padding: 0 1.75rem;
+  order: 2;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .intro__image-col {
+    padding: 0 1.75rem;
+    width: 50%;
+  }
+}
+
+.intro__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  filter: saturate(1.08) contrast(1.04);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 480px) {
+  .intro__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
