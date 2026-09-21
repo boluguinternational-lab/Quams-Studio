@@ -1,130 +1,56 @@
-.nav-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: rgba(var(--color-paper-rgb), 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(var(--color-ink-rgb), 0.1);
+/* Skelaw Studios — navbar
+   Tailwind utility classes handle most of the styling in Navbar.jsx;
+   this file covers the bits Tailwind's core utilities don't reach. */
+
+.skelaw-nav .font-serif {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
-.nav-inner {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 1rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.25rem;
-  color: var(--color-olive-deep);
-}
-
-/* Desktop links */
-.nav-links {
-  display: none; 
-  gap: 3rem; 
-}
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-  .nav-toggle {
-    display: none;
-  }
-}
-
-.nav-link {
+/* Blue underline on nav link hover */
+.skelaw-nav__link {
   position: relative;
-  color: var(--color-ink-soft);
-  transition: color 0.2s ease;
+  padding-bottom: 2px;
 }
 
-.nav-link::after {
-  content: '';
+.skelaw-nav__link::after {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
-  height: 1px;
-  width: 0;
-  background-color: var(--color-olive-deep);
-  transition: width 0.3s ease, background-color 0.3s ease;
+  right: 100%;
+  bottom: 0;
+  height: 1.5px;
+  background-color: #4a90e2;
+  transition: right 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link:focus-visible,
-.nav-link:active {
-  color: var(--color-nav-active, #2563eb);
+.skelaw-nav__link:hover::after,
+.skelaw-nav__link:focus-visible::after {
+  right: 0;
 }
 
-.nav-link:hover::after,
-.nav-link:focus-visible::after {
-  width: 100%;
-  background-color: var(--color-nav-active, #2563eb);
-}
-
-.nav-link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 1px rgba(var(--color-olive-deep-rgb), 0.4);
-  border-radius: 2px;
-}
-
-/* Active nav indicator */
-.nav-link.active {
-  color: var(--color-nav-active, #2563eb);
-}
-
-.nav-link.active::after {
-  width: 100%;
-  background-color: var(--color-nav-active, #2563eb);
-}
-
-/* Mobile toggle button */
-.nav-toggle {
-  color: var(--color-olive-deep);
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-toggle-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-/* Mobile menu */
-.nav-mobile {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid rgba(var(--color-ink-rgb), 0.1);
-}
-
-@media (min-width: 768px) {
-  .nav-mobile {
-    display: none;
+@media (prefers-reduced-motion: reduce) {
+  .skelaw-nav__link::after {
+    transition: none;
   }
 }
 
-.nav-mobile-link {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(var(--color-ink-rgb), 0.1);
-  color: var(--color-ink-soft);
-  transition: background-color 0.2s ease, color 0.2s ease;
+.skelaw-nav__mobile-panel {
+  animation: skelaw-nav-panel-in 0.18s ease-out;
 }
 
-.nav-mobile-link:hover,
-.nav-mobile-link:focus-visible,
-.nav-mobile-link:active {
-  color: var(--color-nav-active, #2563eb);
-  background-color: rgba(37, 99, 235, 0.05);
+@keyframes skelaw-nav-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.nav-mobile-link.active {
-  color: var(--color-nav-active, #2563eb);
-  background-color: rgba(37, 99, 235, 0.08);
-  border-left: 2px solid var(--color-nav-active, #2563eb);
+@media (prefers-reduced-motion: reduce) {
+  .skelaw-nav__mobile-panel {
+    animation: none;
+  }
 }

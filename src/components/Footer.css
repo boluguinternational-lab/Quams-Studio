@@ -1,0 +1,225 @@
+/* Skelaw Studios — footer component
+   Beige background, dark brown ink, serif display + clean sans links. */
+
+.skelaw-footer {
+  background-color: #f0ebe0;
+  color: #3c2c1f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  padding: 4rem 1.5rem 2.25rem;
+}
+
+.skelaw-footer__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ---- Header: title + tagline + socials ---- */
+
+.skelaw-footer__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.skelaw-footer__title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0.01em;
+  margin: 0 0 0.6rem;
+  color: #2e2018;
+}
+
+.skelaw-footer__tagline {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #5a4636;
+  max-width: 26rem;
+  margin: 0;
+}
+
+/* ---- Socials ---- */
+
+.skelaw-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+.skelaw-footer__social-link {
+  color: #3c2c1f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.skelaw-footer__social-link:hover,
+.skelaw-footer__social-link:focus-visible {
+  opacity: 1;
+}
+
+.skelaw-footer__social-link:focus-visible {
+  outline: 2px solid #3c2c1f;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- Menu rows (mobile: stacked groups) ---- */
+
+.skelaw-footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.75rem;
+}
+
+.skelaw-footer__menu-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.25rem;
+  row-gap: 0.6rem;
+}
+
+.skelaw-footer__menu-link {
+  font-size: 0.95rem;
+  color: #3c2c1f;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: opacity 0.15s ease;
+}
+
+.skelaw-footer__menu-link:hover,
+.skelaw-footer__menu-link:focus-visible {
+  opacity: 0.65;
+}
+
+.skelaw-footer__menu-link:focus-visible {
+  outline: 2px solid #3c2c1f;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- Divider ---- */
+
+.skelaw-footer__divider {
+  border: none;
+  border-top: 1px solid rgba(60, 44, 31, 0.25);
+  margin: 0 0 1.5rem;
+}
+
+/* ---- Bottom row (mobile: stacked) ---- */
+
+.skelaw-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skelaw-footer__copyright {
+  font-size: 0.85rem;
+  color: #5a4636;
+  margin: 0;
+}
+
+.skelaw-footer__bottom-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skelaw-footer__bottom-link {
+  font-size: 0.8rem;
+  color: #5a4636;
+  text-decoration: none;
+}
+
+.skelaw-footer__bottom-link--static {
+  cursor: default;
+}
+
+.skelaw-footer__bottom-link:hover,
+.skelaw-footer__bottom-link:focus-visible {
+  color: #3c2c1f;
+}
+
+.skelaw-footer__bottom-link:focus-visible {
+  outline: 2px solid #3c2c1f;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skelaw-footer__bottom-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #9c8a76;
+  display: inline-block;
+}
+
+/* ---- Desktop: single-row menu, side-by-side header/bottom ---- */
+
+@media (min-width: 768px) {
+  .skelaw-footer__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .skelaw-footer__socials {
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  /* Flatten the three grouped rows into one continuous wrapping row,
+     matching the live site's single-line (wrapping) menu on desktop. */
+  .skelaw-footer__menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 0.75rem;
+  }
+
+  .skelaw-footer__menu-row {
+    display: contents;
+  }
+
+  .skelaw-footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ---- Mobile: stack links ---- */
+
+@media (max-width: 600px) {
+  .skelaw-footer {
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  .skelaw-footer__menu-row {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .skelaw-footer__bottom {
+    flex-direction: column;
+  }
+
+  .skelaw-footer__bottom-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skelaw-footer__social-link,
+  .skelaw-footer__menu-link,
+  .skelaw-footer__bottom-link {
+    transition: none;
+  }
+}

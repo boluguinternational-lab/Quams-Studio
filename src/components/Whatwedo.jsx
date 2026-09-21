@@ -1,4 +1,4 @@
-import './WhatWeDo.css'
+import './Whatwedo.css' 
 // https://res.cloudinary.com/tubirssu/image/upload/v1789141309/portofolio/wedd-27.jpg
 const CLOUDINARY_CLOUD_NAME = 'tubirssu'
 
