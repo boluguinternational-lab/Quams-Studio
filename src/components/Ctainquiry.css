@@ -3,12 +3,20 @@
   height: 520px;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 80px auto;
+  background: none;
+}
+
+/* Explicitly kill any pseudo-element overlays on the parent */
+.cta-banner::before,
+.cta-banner::after {
+  content: none;
+  display: none;
+  background: none;
 }
 
 .cta-banner-image {
@@ -18,12 +26,9 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.cta-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
 }
 
 .cta-banner-content {
