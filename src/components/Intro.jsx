@@ -14,13 +14,13 @@ export default function Intro() {
             between.
           </p>
           <p className="intro__paragraph">
-            Documentary-inspired photography - honest moments, beautifully
+            Documentary-inspired photography - honest moments, beautifully  
             remembered.
           </p>
 
           <div className="intro__actions">
             <a href="#work" className="btn btn--primary">
-              See Our Work
+              See Our Packages 
             </a>
             <a href="#contact" className="btn btn--secondary">
               Get in Touch
@@ -31,13 +31,7 @@ export default function Intro() {
           
       <div className="intro__image-col">
         <img
-          src="https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_900/v1789400592/portofolio/prewedd-16.jpg"
-          srcSet="
-            https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_600/v1789400592/packages/IMG_4328.jpg 600w,
-            https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_900/v1789400592/packages/IMG_4328.jpg 900w,
-            https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_1200/v1789400592/packages/IMG_4328.jpg 1200w,
-            https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_1600/v1789400592/packages/IMG_4328.jpg 1600w
-          "
+          src="https://res.cloudinary.com/tubirssu/image/upload/f_auto,q_auto,c_fill,g_auto,w_900/v1790036974/hero/Quams-14.jpg" 
           sizes="(min-width: 768px) 50vw, 100vw"
           loading="lazy"
           decoding="async"

@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="skelaw-footer__inner">
         <div className="skelaw-footer__header">
           <div className="skelaw-footer__brand">
-            <h2 className="skelaw-footer__title">Jema Studios</h2>
+            <h2 className="skelaw-footer__title">Quams Studios</h2>
             <p className="skelaw-footer__tagline">
               Wedding photography &amp; film, told with care, across Ghana, the USA, Canada and Europe.
             </p>
@@ -96,7 +96,7 @@ export default function Footer() {
         <hr className="skelaw-footer__divider" />
 
         <div className="skelaw-footer__bottom">
-          <p className="skelaw-footer__copyright">© 2026 Jema Studios</p>
+          <p className="skelaw-footer__copyright">© 2026 Quams Studios</p>
           <div className="skelaw-footer__bottom-links">
             {bottomLinks.map((link, i) => (
               <React.Fragment key={link}>

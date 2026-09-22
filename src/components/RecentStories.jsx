@@ -21,6 +21,25 @@ const stories = [
     description:
       "Salt air, old stone, and a promise made where the Atlantic meets the shore they both grew up on.",
   },
+   {
+    image: "https://res.cloudinary.com/tubirssu/image/upload/v1789911468/packages/IMG_4475.jpg?auto=format&fit=crop&w=800&q=80",
+    title: "Vows by the Coast: Daniel & Abena in Cape Coast",
+    description:
+      "Salt air, old stone, and a promise made where the Atlantic meets the shore they both grew up on.",
+  },
+   {
+    image: "https://res.cloudinary.com/tubirssu/image/upload/v1789911468/packages/IMG_4475.jpg?auto=format&fit=crop&w=800&q=80",
+    title: "Vows by the Coast: Daniel & Abena in Cape Coast",
+    description:
+      "Salt air, old stone, and a promise made where the Atlantic meets the shore they both grew up on.",
+  },
+   {
+    image: "https://res.cloudinary.com/tubirssu/image/upload/v1789911468/packages/IMG_4475.jpg?auto=format&fit=crop&w=800&q=80",
+    title: "Vows by the Coast: Daniel & Abena in Cape Coast",
+    description:
+      "Salt air, old stone, and a promise made where the Atlantic meets the shore they both grew up on.",
+  },
+
 ];
 
 function StoryCard({ image, title, description }) {

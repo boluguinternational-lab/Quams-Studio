@@ -2,8 +2,8 @@ import React from "react";
 import "./StatsCard.css";
 
 const stats = [
-  { value: "1,100+", label: "Weddings" },
-  { value: "4", label: "Regions" },
+  { value: "500+", label: "Weddings" },
+  { value: "5000+", label: "Photos Delivered" },   
   { value: "10+", label: "Years" },
 ];
 

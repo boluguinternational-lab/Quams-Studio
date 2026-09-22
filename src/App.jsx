@@ -15,7 +15,7 @@ export default function App() {
       <Nav />
       <Hero />
       <Intro />
-      <StatsCard /> 
+      <StatsCard />     
       <Whatwedo />   
       <Gallery /> 
       <Pricingcards />  

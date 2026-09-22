@@ -139,6 +139,12 @@
 @media (max-width: 480px) {
   .intro__actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    margin-bottom: 2.5rem;   /* space between buttons and image */
+  }
+
+  .btn {
+    padding: 0.65rem 1.5rem; /* smaller padding on mobile */
+    font-size: 0.85rem;      /* smaller font on mobile */
   }
 }

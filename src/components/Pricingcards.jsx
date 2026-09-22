@@ -1,5 +1,12 @@
 import './Pricingcards.css' 
 // https://res.cloudinary.com/tubirssu/image/upload/v1789690904/portofolio/IMG_4378.jpg
+// https://res.cloudinary.com/tubirssu/image/upload/v1790036753/about/Quams-1.jpg
+// https://res.cloudinary.com/tubirssu/image/upload/v1790036969/hero/Quams-11.jpg
+// https://res.cloudinary.com/tubirssu/image/upload/v1790036755/about/Quams-2.jpg
+
+
+
+
 const CLOUDINARY_CLOUD_NAME = 'tubirssu'
 
 const cld = (publicId) =>
@@ -9,27 +16,36 @@ const COLLECTIONS = [
   {
     id: 1,
     badge: 'PHOTO + FILM',
-    image: cld('portofolio/IMG_4378'),
-    title: 'Full-Board',
+    image: cld('about/Quams-1.jpg'),
+    title: 'Wedding-Board',
     description: 'Unlimited photo + film, the complete story.',
-    price: '₵60,000',
+    price: '₵10,000', 
   },
-  {
+
+   {
     id: 2,
-    badge: 'PHOTO',
-    image: cld('portofolio/IMG_4378'),
-    title: 'Essential Love',
-    description: 'Everything you need, none of the extras.',
-    price: '₵15,000',
+    badge: 'PHOTO + FILM',
+    image: cld('hero/Quams-11.jpg'), 
+    title: 'Event-Board',  
+    description: 'Unlimited photo + film, the complete story.',
+    price: '₵8,000',
   },
-  {
+
+   {
     id: 3,
-    badge: 'PHOTO',
-    image: cld('portofolio/IMG_4378'),
-    title: 'Post / Pre-Wedding',
-    description: 'A standalone shoot, before or after the day.',
-    price: '₵4,000',
+    badge: 'PHOTO + FILM',
+    image: cld('about/Quams-2.jpg'),  
+    title: 'Graduation-Board',  
+    description: 'Unlimited photo + film, the complete story.',
+    price: '₵2,000',    
   },
+
+ 
+
+
+
+
+
 ]
 
 function PricingCard({ collection }) {

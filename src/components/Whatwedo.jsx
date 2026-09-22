@@ -1,5 +1,9 @@
 import './Whatwedo.css' 
-// https://res.cloudinary.com/tubirssu/image/upload/v1789141309/portofolio/wedd-27.jpg
+
+// https://res.cloudinary.com/tubirssu/image/upload/v1790036756/about/Quams-3.jpg
+
+
+
 const CLOUDINARY_CLOUD_NAME = 'tubirssu'
 
 // f_auto/q_auto let Cloudinary pick the best format/quality per browser,
@@ -12,17 +16,17 @@ const SERVICES = [
   {
     title: 'Weddings',
     caption: 'Traditional and white, told in full, the house we were built on.',
-    image: cld('portofolio/wedd-27.jpg'),
+    image: cld('about/Quams-3.jpg'),  
   },
   {
     title: 'Films',
-    caption: 'Cinematic wedding films couples replay for years.',
-    image: cld('portofolio/wedd-27.jpg'),
+    caption: 'Cinematic wedding films couples replay for years.',   
+    image: cld('hero/Quams-13.jpg'),
   },
   {
     title: 'Portraits & Events',
     caption: 'Engagements, portraits and the celebrations in between.',
-    image: cld('portofolio/wedd-27.jpg'),  
+    image: cld('about/Quams-2.jpg'),  
   },
 ]
 

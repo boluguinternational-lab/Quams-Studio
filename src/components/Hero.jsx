@@ -7,7 +7,7 @@ export default function Hero() {
       className="hero"
       style={{
         backgroundImage:
-          "url('https://res.cloudinary.com/tubirssu/image/upload/v1789446616/copy_of_tradi-21.jpg')", 
+          "url('https://res.cloudinary.com/tubirssu/image/upload/v1790036759/about/Quams-6.jpg')",   
       }}
     >
       <div className="hero__scrim" />
@@ -21,10 +21,10 @@ export default function Hero() {
 
         <div className="hero__actions">
           <a href="#work" className="btn btn--primary">
-            Book Us Now 
+            Book Us Now  
           </a>
           <a href="#about" className="btn btn--secondary">
-            View Our Stories 
+            Explore Gallery  
           </a>
         </div>
       </div>

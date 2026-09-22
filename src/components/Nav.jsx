@@ -43,13 +43,13 @@ function MenuIcon({ open }) {
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false);  
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);  
   }, []);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Left: logo */}
         <a href="#" className="font-serif text-lg font-bold tracking-tight text-[#2E2018]">
-          Skelaw Studios
+          QUAMS STUDIO   
         </a>
 
         {/* Center: menu (desktop only) */}

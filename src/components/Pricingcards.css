@@ -31,21 +31,12 @@
   gap: 24px;
 }
 
-/* Mobile: swipeable horizontal scroll */
+/* Mobile: stack cards vertically */
 @media (max-width: 768px) {
   .pc-grid {
     display: flex;
-    grid-template-columns: none;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
-    scrollbar-width: none;
-  }
-
-  .pc-grid::-webkit-scrollbar {
-    display: none;
+    flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -65,7 +56,6 @@
 @media (max-width: 768px) {
   .pc-card {
     width: 100%;
-    scroll-snap-align: start;
   }
 }
 
