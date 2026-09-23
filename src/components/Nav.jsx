@@ -56,6 +56,12 @@ export default function Navbar() {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
+  // Helper: refresh the page
+  const refreshPage = (e) => {
+    e.preventDefault();
+    window.location.reload();
+  };
+
   return (
     <header
       className={[
@@ -67,7 +73,11 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Left: logo */}
-        <a href="#" className="font-serif text-lg font-bold tracking-tight text-[#2E2018]">
+        <a
+          href="/"
+          onClick={refreshPage}
+          className="font-serif text-lg font-bold tracking-tight text-[#2E2018]"
+        >
           QUAMS STUDIO   
         </a>
 
@@ -76,7 +86,8 @@ export default function Navbar() {
           {menuLinks.map((link) => (
             <a
               key={link}
-              href="#"
+              href="/"
+              onClick={refreshPage}
               className="skelaw-nav__link text-sm text-[#6b6b6b] hover:text-[#2E2018] transition-colors"
             >
               {link}
@@ -96,7 +107,8 @@ export default function Navbar() {
           </button>
 
           <a
-            href="#enquire"
+            href="/"
+            onClick={refreshPage}
             className="rounded-full bg-[#4A90E2] px-6 py-2.5 text-sm font-medium text-white hover:bg-[#3E7FC9] transition-colors"
           >
             Enquire
@@ -122,9 +134,13 @@ export default function Navbar() {
             {menuLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href="/"
                 className="text-sm text-[#4a4a4a]"
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileOpen(false);
+                  window.location.reload();
+                }}
               >
                 {link}
               </a>
@@ -142,9 +158,13 @@ export default function Navbar() {
             </button>
 
             <a
-              href="#enquire"
+              href="/"
               className="flex-1 rounded-full bg-[#4A90E2] px-6 py-2.5 text-center text-sm font-medium text-white hover:bg-[#3E7FC9] transition-colors"
-              onClick={() => setMobileOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setMobileOpen(false);
+                window.location.reload();
+              }}
             >
               Enquire
             </a>

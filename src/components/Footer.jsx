@@ -11,10 +11,10 @@ const socialLinks = [
 const menuRows = [
   ["Home", "Journal", "Offerings", "Space"],
   ["Experience", "Store", "Films", "Portraits & Events"],
-  ["FAQ", "Contact", "Join our team", "The Jema Family"],
+  ["FAQ", "Contact", "Join our team", "The Quams Family"], 
 ];
 
-const bottomLinks = ["Privacy", "Terms", "Quick links", "Ghana · USA · Canada · Europe"];
+const bottomLinks = ["Privacy", "Terms", "Quick links", "Ghana · Acccra · Kumasi · Sunyani"];  
 
 // Minimal inline icon set so the component has no external icon dependency
 function SocialIcon({ name }) {
@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="skelaw-footer__brand">
             <h2 className="skelaw-footer__title">Quams Studios</h2>
             <p className="skelaw-footer__tagline">
-              Wedding photography &amp; film, told with care, across Ghana, the USA, Canada and Europe.
+              Wedding photography &amp; film, beautifully told, timelessly preserved.   
             </p>
           </div>
 
