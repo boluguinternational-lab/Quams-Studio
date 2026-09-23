@@ -67,7 +67,7 @@
   border-radius: 2px;
 }
 
-/* ---- Menu rows (mobile: stacked groups) ---- */
+/* ---- Menu rows ---- */
 
 .skelaw-footer__menu {
   display: flex;
@@ -78,6 +78,7 @@
 
 .skelaw-footer__menu-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   column-gap: 2.25rem;
   row-gap: 0.6rem;
@@ -110,7 +111,7 @@
   margin: 0 0 1.5rem;
 }
 
-/* ---- Bottom row (mobile: stacked) ---- */
+/* ---- Bottom row ---- */
 
 .skelaw-footer__bottom {
   display: flex;
@@ -175,8 +176,6 @@
     flex-shrink: 0;
   }
 
-  /* Flatten the three grouped rows into one continuous wrapping row,
-     matching the live site's single-line (wrapping) menu on desktop. */
   .skelaw-footer__menu {
     flex-direction: row;
     flex-wrap: wrap;
@@ -195,16 +194,33 @@
   }
 }
 
-/* ---- Mobile: stack links ---- */
+/* ---- Mobile: 4 links per row using CSS Grid (forced) ---- */
+
+@media (max-width: 767px) {
+  .skelaw-footer__menu {
+    display: block;               /* reset any column flex */
+  }
+
+  .skelaw-footer__menu-row {
+    display: grid !important;                          /* force grid */
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    flex-direction: row !important;
+    column-gap: 0.75rem;
+    row-gap: 0.85rem;
+    width: 100%;
+  }
+
+  .skelaw-footer__menu-link {
+    font-size: 0.82rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 
 @media (max-width: 600px) {
   .skelaw-footer {
     padding: 3rem 1.25rem 2rem;
-  }
-
-  .skelaw-footer__menu-row {
-    flex-direction: column;
-    gap: 0.65rem;
   }
 
   .skelaw-footer__bottom {
