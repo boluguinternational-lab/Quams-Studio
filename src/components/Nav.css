@@ -67,7 +67,7 @@
   border-radius: 2px;
 }
 
-/* ---- Menu rows (all screens: horizontal, wrapping) ---- */
+/* ---- Menu rows ---- */
 
 .skelaw-footer__menu {
   display: flex;
@@ -78,10 +78,9 @@
 
 .skelaw-footer__menu-row {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 1.5rem;
-  row-gap: 0.65rem;
+  column-gap: 2.25rem;
+  row-gap: 0.6rem;
 }
 
 .skelaw-footer__menu-link {
@@ -196,19 +195,23 @@
   }
 }
 
-/* ---- Mobile: keep links horizontal, let them wrap ---- */
+/* ---- Mobile: 4 links per row using CSS Grid ---- */
 
 @media (max-width: 600px) {
   .skelaw-footer {
     padding: 3rem 1.25rem 2rem;
   }
 
-  /* Links stay in a horizontal row and wrap onto new lines as needed */
+  /* Each menu row becomes a 4-column grid so links line up in columns */
   .skelaw-footer__menu-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 1.25rem;
-    row-gap: 0.65rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 0.75rem;
+    row-gap: 0.75rem;
+  }
+
+  .skelaw-footer__menu-link {
+    font-size: 0.85rem;
   }
 
   .skelaw-footer__bottom {
